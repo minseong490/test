@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"); /*본문 폰트*/
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Grandiflora+One&display=swap"); /*시작화면 폰트*/
+@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap"); /*네비게이션바 영어폰트*/
+
+/*nav바를 위로 고정, footer는 아래 고정해서 스크롤해도 아래에있게*/
+/* body{
+  background-color: #222831; 60퍼
+  background-color: #393E46; 20퍼
+  background-color: #00ADB5; 10퍼
+  background-color: #EEEEEE; 10퍼 텍스트와 배경의 대조
+} */
+/* App.css */
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 브라우저 자체 스크롤 제거 */
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* === 전체 앱 래퍼 === */
+/* 화면 전체를 꽉 채우고 움직이지 않도록 고정 */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 화면 높이 100% 고정 */
+  overflow: hidden; /* 내부 요소가 넘쳐도 전체 스크롤 방지 */
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === 1. Nav 영역 (.sidebar) - 상단 고정 === */
+.sidebar {
+  flex-shrink: 0; /* 높이가 줄어들지 않음 */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  background-color: rgba(128, 128, 128, 0.05);
+  gap: 3rem;
+  z-index: 10;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 2px dashed rgba(128, 128, 128, 0.4);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: rgba(128, 128, 128, 0.15);
+}
+
+.theme-toggle-btn {
+  position: absolute;
+  right: 2rem;
+  margin-left: auto;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  font-weight: bold;
+  color: inherit;
+  white-space: nowrap;
+}
+
+/* === 2. 메인 컨테이너 (Header + Section) === */
+/* Nav와 Footer 사이의 남은 공간을 모두 차지 */
+.container {
+  display: flex;
+  flex: 1; /* 남은 세로 공간 채움 */
+  min-height: 0; /* [중요] 자식 스크롤 동작을 위해 필수 */
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5rem; /* 패딩을 줄여서 공간 확보 */
+  gap: 1.5rem;
+  overflow: hidden; /* 이 컨테이너 자체는 스크롤되지 않음 */
+}
+
+/* === 3. Header 영역 (.app-header) - 좌측 고정 === */
+.app-header {
+  width: 240px;
+  flex-shrink: 0; /* 너비 줄어들지 않음 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+
+  /* 스타일 */
+  border: 4px solid rgba(128, 128, 128, 0.3);
+  border-radius: 12px;
+  background-color: rgba(128, 128, 128, 0.05);
+  text-align: center;
+
+  /* 스크롤 설정 */
+  overflow-y: auto; /* 내용 많으면 자체 스크롤 */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  word-break: keep-all;
+  line-height: 1.4;
+}
+
+/* === 4. Main Section 영역 (.app-section) - 스크롤 영역 === */
+.app-section {
+  flex: 1; /* 남은 가로 공간 채움 */
+  display: flex; /* 내부 컨텐츠 정렬을 위해 flex 사용 */
+  flex-direction: column;
+
+  /* 스타일 */
+  padding: 2rem;
+  border: 4px solid rgba(128, 128, 128, 0.3);
+  border-radius: 16px;
+  background-color: rgba(128, 128, 128, 0.03);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+  /* [핵심] 스크롤 설정 */
+  overflow-y: auto; /* 세로 스크롤 허용 */
+  min-height: 0; /* Flex 자식 스크롤 버그 방지 */
+}
+
+/* Footer 영역 */
+footer {
+  flex-shrink: 0; /* 높이 고정 */
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  background-color: inherit; /* 배경색 유지 */
+  z-index: 10;
+}
+
+/* 반응형
+  @media (max-width: 768px) {
+    .app-wrapper {
+      height: auto;
+      overflow: visible;
+    }
+    .container {
+      flex-direction: column;
+      height: auto;
+      overflow: visible;
+    }
+    .app-header {
+      width: 100%;
+      height: auto;
+    }
+    .app-section {
+      height: auto;
+      overflow: visible;
+    }
+  } */
