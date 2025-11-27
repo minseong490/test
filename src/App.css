@@ -164,3 +164,73 @@ footer {
       overflow: visible;
     }
   } */
+  /* === 3. Header 영역 (.app-header) - 프로필 사이드바 === */
+  .app-header {
+    width: 260px; /* 너비 살짝 넓힘 */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+
+    border: 4px solid rgba(128, 128, 128, 0.3);
+    border-radius: 12px;
+    background-color: rgba(128, 128, 128, 0.05);
+    text-align: center;
+    overflow-y: auto;
+  }
+
+  /* [New] 프로필 이미지 스타일 */
+  .profile-image-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;     /* 완벽한 원형 */
+    object-fit: cover;      /* 비율 유지하며 꽉 채움 */
+    border: 4px solid rgba(128, 128, 128, 0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.05);
+  }
+
+  /* [New] 프로필 정보 텍스트 */
+  .profile-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .profile-name {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    word-break: keep-all;
+    font-family: 'Gowun Dodum', sans-serif;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    border-top: 1px dashed rgba(128, 128, 128, 0.3);
+  }
+
+  .profile-details p {
+    margin: 1;
+    font-size: 1.3rem;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }

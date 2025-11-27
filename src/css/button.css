@@ -1,0 +1,19 @@
+.head {
+  padding: 20px;
+}
+
+.head-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.head-button button {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.head-button h3 {
+  margin: 0;
+}

@@ -1,0 +1,96 @@
+/* 1. 전체 컨테이너 */
+.project-detail-container {
+  display: flex;
+  gap: 30px;
+}
+
+/* 2. 왼쪽 영역: 이미지 리스트 */
+.project-image-list {
+  flex: 1; /* 전체의 약 33% 차지 */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 이미지 래퍼 (박스) - 높이 고정 역할 */
+.project-image-wrapper {
+  width: 100%;
+  height: 150px; /* [핵심] 여기서 높이를 고정해야 이미지가 안 커집니다 */
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 실제 이미지 스타일 */
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 영역 꽉 채우기 */
+  transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.05); /* 호버 확대 효과 */
+}
+
+/* 3. 오른쪽 영역: 프로젝트 설명 */
+.project-description {
+  flex: 2; /* 전체의 약 66% 차지 */
+}
+
+.project-title {
+  margin-top: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* 기술 스택 영역 */
+.tech-stack {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.tech-badge {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 4px 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* 본문 텍스트 */
+.project-text {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* 주요 기능 타이틀 */
+.feature-title {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* 리스트 스타일 */
+.feature-list {
+  line-height: 1.6;
+  padding-left: 1.2rem;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .project-detail-container {
+    flex-direction: column;
+  }
+  .project-image-wrapper {
+    height: 200px;
+  }
+}

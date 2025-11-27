@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import React, { useState } from "react";
 import { ThemeContext } from "./ThemeContext";
 import { theme } from "./theme";
-import Index from "./Component/Index";
 import AboutMe from "./Component/AboutMe";
 import Project from "./Component/Project";
 import Contest from "./Component/Contest";
@@ -42,11 +41,31 @@ export default function App() {
 
           <div className="container">
             <header className="app-header">
-              <div className="logo">김민성의 portfolio </div>
+              
+              {/* 1. 프로필 사진 (원형) */}
+              <div className="profile-image-container">
+                {/* 실제 사용하실 이미지 URL을 src에 넣어주세요 */}
+                <img 
+                  src="/images/profile.png" 
+                  alt="프로필"
+                  className="profile-img" 
+                />
+              </div>
+
+              {/* 2. 개인 정보 텍스트 */}
+              <div className="profile-info">
+                <h2 className="profile-name">김민성</h2>
+                <div className="profile-details">
+                  <p>📅 2003.12.02</p>
+                  <p>📧 qnemek@naver.com</p>
+                  <p>📞 010-5031-4307</p>
+                </div>
+              </div>
+
             </header>
             <main className="app-section">
               <Routes>
-                <Route path="/" element={<Index />} />
+                <Route path="/" element={<AboutMe />} />
                 <Route path="/AboutMe" element={<AboutMe />} />
                 <Route path="/project" element={<Project />} />
                 <Route path="/contest" element={<Contest />} />
