@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Introduce from "./AboutMe/Introduce";
-import Resume from "./AboutMe/Resume";  
+import Resume from "./AboutMe/Resume";
+import "../css/AboutMe.css";
 
 export default function AboutMe() {
   const [showResume, setShowResume] = useState(false);
@@ -9,20 +10,8 @@ export default function AboutMe() {
     <div className="about-me-container">
       {showResume ? (
         <div className="resume-wrapper fade-in">
-          <button 
-            onClick={() => setShowResume(false)}
-            style={{ 
-              marginBottom: '20px', 
-              padding: '8px 16px', 
-              cursor: 'pointer',
-              border: 'none',
-              background: 'transparent',
-              fontSize: '1rem',
-              fontWeight: 'bold',
-              color: '#666'
-            }}
-          >
-            &lt; 뒤로가기 (자기소개)
+          <button className="button-style" onClick={() => setShowResume(false)}>
+            ⬅️ 뒤로가기 (자기소개)
           </button>
           <Resume />
         </div>
