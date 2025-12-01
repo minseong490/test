@@ -1,46 +1,36 @@
-import React from 'react';
-import '../../css/contest123.css'; // [중요] 분리한 CSS 파일 불러오기
-
+import React from "react";
+import "../../css/contest123.css";
 function Contest1() {
   return (
     <div className="contest-detail">
-      
-      {/* 1. 메인 타이틀 및 개요 */}
       <div className="contest-header">
-        <h1 className="contest-title">제 1회 대학생 SW 해커톤</h1>
+        <h1 className="contest-title">정션 아시아 2024</h1>
         <p className="contest-meta">
-          <strong>기간:</strong> 2023.08.01 ~ 2023.08.03
+          <strong>기간:</strong> 2024.08.09 ~ 2024.08.11
         </p>
       </div>
 
-      {/* 2. 첫 번째 섹션: 아이디어 기획 */}
       <section className="contest-section">
-        <h3 className="contest-section-title">
-          💡 아이디어 기획 단계
-        </h3>
-        
-        {/* 사진 영역 */}
+        <h3 className="contest-section-title">참가 소감</h3>
+
         <div className="contest-image-wrapper">
-          {/* <img src="/images/contest1_brainstorming.jpg" alt="브레인스토밍" /> */}
-          <span>[사진: 팀원들과 브레인스토밍 하는 모습]</span>
+          <img src="/images/contest1.png" alt="참가 모습" />
         </div>
 
-        {/* 설명 영역 */}
+        <h3>
+          100% 영어 진행, 글로벌 참가자와의 네트워킹, 기업 트랙(발제) 기반 문제
+          해결
+        </h3>
+
         <p className="contest-description">
-          우리 팀은 '시각장애인을 위한 대중교통 안내 서비스'를 주제로 선정했습니다. 
-          기존 앱들이 음성 안내에만 의존한다는 점에 착안하여, 햅틱(진동) 피드백과 고정밀 GPS를 결합한 솔루션을 제안했습니다.
-          첫날 밤샘 회의를 통해 페르소나를 설정하고, 사용자 여정 지도(User Journey Map)를 그리며 구체적인 기능을 확정했습니다.
+          확실히 국내 해커톤과는 분위기가 다릅니다. 외국인 참가자가 많아 영어
+          소통 능력이 중요했고, 단순 개발보다 '글로벌 네트워킹' 파티 같은 느낌이
+          강했습니다. 2박 3일 동안 잠을 거의 못 자서 힘들었지만, 현업 멘토들의
+          피드백 수준이 높았습니다. 다만, 행사장의 와이파이 네트워크 이슈로 배포
+          과정에서 식은땀을 흘렸던 기억이 납니다. 색다른 자극과 도파민이 필요한
+          분들에게 강력 추천합니다.
         </p>
       </section>
-
-      {/* 필요한 경우 아래에 추가 섹션을 같은 구조로 복사해서 넣으시면 됩니다. */}
-      {/* <section className="contest-section">
-        <h3 className="contest-section-title">💻 개발 과정</h3>
-        <div className="contest-image-wrapper"><span>[사진]</span></div>
-        <p className="contest-description">설명...</p>
-      </section> 
-      */}
-
     </div>
   );
 }

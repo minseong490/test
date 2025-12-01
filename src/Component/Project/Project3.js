@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../css/project123.css"; // 사용자 정의 CSS 경로
+import "../../css/project123.css"; 
 
 function Project3() {
   return (
@@ -9,24 +9,24 @@ function Project3() {
         
         <div className="project-image-wrapper">
           <img 
-            src="/images/project1_1.png" 
-            alt="웹 포트폴리오 메인 화면"
+            src="/images/project3_1.png" 
+            alt="서비스 메인 화면"
             className="project-img"
           />
         </div>
 
         <div className="project-image-wrapper">
           <img 
-            src="/images/project1_2.png" 
-            alt="웹 포트폴리오 메인 화면"
+            src="/images/project3_2.png" 
+            alt="서비스 메인 화면"
             className="project-img"
           />
         </div>
 
         <div className="project-image-wrapper">
           <img 
-            src="/images/project1_3.png" 
-            alt="웹 포트폴리오 메인 화면"
+            src="/images/project3_3.png" 
+            alt="서비스 메인 화면"
             className="project-img"
           />
         </div>
@@ -34,23 +34,25 @@ function Project3() {
       </div>
 
       <div className="project-description">
-        <h2 className="project-title">Project 1: 웹 포트폴리오</h2>
+        <h2 className="project-title">Project 3: 단백질 파우더 최저가 알림 서비스</h2>
         
         <div className="tech-stack">
           <span className="tech-badge">React</span>
           <span className="tech-badge">CSS</span>
+          <span className="tech-badge">Express</span>
         </div>
 
         <p className="project-text">
-          이 프로젝트는 개인 포트폴리오 용도로 제작된 웹사이트입니다. <br/>
-          왼쪽에는 포트폴리오의 주요 스크린샷들을 배치하였습니다.
+          보충제는 소모품이라 주기적으로 구매해야 하는데, 프로모션이나 환율에 따라 가격 변동폭이 큽니다.<br/>
+          이 서비스는 매번 사이트에 들어가 확인하는 번거로움을 자동화 기술로 해결합니다.
         </p>
         
         <h3 className="feature-title">주요 기능</h3>
         <ul className="feature-list">
-          <li>반응형 레이아웃 구성</li>
-          <li>다크 모드 지원</li>
-          <li>프로젝트 탭 전환 기능</li>
+          <li>웹 크롤링 & 자동 가격 갱신</li>
+          <li>목표가 알림 설정</li>
+          <li>가격 변동 히스토리 그래프 제공</li>
+          <li>맛/성분 필터링 검색</li>
         </ul>
       </div>
 

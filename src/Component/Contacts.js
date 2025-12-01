@@ -25,11 +25,17 @@ export default function Contacts() {
     objectFit: "cover",
   };
 
+  const wordStyle = {
+    fontSize: "25px",
+    fontWeight: "800",
+    lineHeight: "1.8",
+  };
+
   return (
     <div>
       <h2>연락처</h2>
-      <p>아래 아이콘을 클릭하면 저의 페이지로 연결됩니다.</p>
-      <p>새로운 프로젝트, 협업 제안, 또는 가벼운 커피챗도 환영합니다!</p>
+      <p style={wordStyle}>아래 아이콘을 클릭하면 저의 페이지로 연결됩니다.<br/>
+      새로운 프로젝트, 협업 제안, 또는 가벼운 커피챗도 환영합니다!</p>
 
       <div style={{ display: "flex", gap: "20px" }}>
         {socialLinks.map((social) => (

@@ -6,7 +6,7 @@ import AboutMe from "./Component/AboutMe";
 import Project from "./Component/Project";
 import Contest from "./Component/Contest";
 import Contacts from "./Component/Contacts";
-import "./App.css"; // CSS 파일 임포트 확인
+import "./App.css"; 
 
 export default function App() {
   const [currentTheme, setCurrentTheme] = useState("dark");
@@ -23,7 +23,6 @@ export default function App() {
         <div
           className="app-wrapper"
           style={{
-            // 동적 스타일: 테마에 따라 바뀌는 색상은 여기서 JS 변수로 주입합니다.
             backgroundColor: selectedTheme.background,
             color: selectedTheme.text,
           }}
@@ -42,9 +41,7 @@ export default function App() {
           <div className="container">
             <header className="app-header">
               
-              {/* 1. 프로필 사진 (원형) */}
               <div className="profile-image-container">
-                {/* 실제 사용하실 이미지 URL을 src에 넣어주세요 */}
                 <img 
                   src="/images/profile.png" 
                   alt="프로필"
@@ -52,7 +49,6 @@ export default function App() {
                 />
               </div>
 
-              {/* 2. 개인 정보 텍스트 */}
               <div className="profile-info">
                 <h2 className="profile-name">김민성</h2>
                 <div className="profile-details">

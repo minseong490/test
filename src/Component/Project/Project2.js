@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css/project123.css"; // 사용자 정의 CSS 경로
+import "../../css/project123.css"; 
 
 function Project2() {
   return (
@@ -7,47 +7,49 @@ function Project2() {
       <div className="project-image-list">
         <div className="project-image-wrapper">
           <img
-            src="/images/project1_1.png"
-            alt="웹 포트폴리오 메인 화면"
+            src="/images/project2_1.png"
+            alt="서비스 메인 화면"
             className="project-img"
           />
         </div>
 
         <div className="project-image-wrapper">
           <img
-            src="/images/project1_2.png"
-            alt="웹 포트폴리오 메인 화면"
+            src="/images/project2_2.png"
+            alt="서비스 메인 화면"
             className="project-img"
           />
         </div>
 
         <div className="project-image-wrapper">
           <img
-            src="/images/project1_3.png"
-            alt="웹 포트폴리오 메인 화면"
+            src="/images/project2_3.png"
+            alt="서비스 메인 화면"
             className="project-img"
           />
         </div>
       </div>
 
       <div className="project-description">
-        <h2 className="project-title">Project 1: 웹 포트폴리오</h2>
+        <h2 className="project-title">Project 2: 출근룩 추천 서비스</h2>
 
         <div className="tech-stack">
           <span className="tech-badge">React</span>
           <span className="tech-badge">CSS</span>
+          <span className="tech-badge">Axios</span>
         </div>
 
         <p className="project-text">
-          이 프로젝트는 개인 포트폴리오 용도로 제작된 웹사이트입니다. <br />
-          왼쪽에는 포트폴리오의 주요 스크린샷들을 배치하였습니다.
+          이 서비스는 바쁜 아침, 옷장 앞에서 고민하는 직장인/학생들의 시간을 절약해줍니다. <br/>
+          기온차, 비/눈 등 날씨 변화에 실패하지 않는 옷차림 제안합니다. <br/>
+          개인의 취향(퍼스널 컬러, 체형)을 분석하여 맞춤형 스타일링 제공합니다.
         </p>
 
         <h3 className="feature-title">주요 기능</h3>
         <ul className="feature-list">
-          <li>반응형 레이아웃 구성</li>
+          <li>날씨 기반 맞춤 코디 추천</li>
           <li>다크 모드 지원</li>
-          <li>프로젝트 탭 전환 기능</li>
+          <li>마이페이지 & 취향 추천 기능</li>
         </ul>
       </div>
     </div>

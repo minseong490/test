@@ -1,15 +1,10 @@
 import React from 'react';
-import "../../css/project123.css"; // 사용자 정의 CSS 경로
+import "../../css/project123.css";
 
 function Project1() {
   return (
-    // 1. 전체 컨테이너
     <div className="project-detail-container">
-      
-      {/* 2. 왼쪽 영역: 이미지 리스트 */}
       <div className="project-image-list">
-        
-        {/* 이미지 1 */}
         <div className="project-image-wrapper">
           <img 
             src="/images/project1_1.png" 
@@ -17,8 +12,6 @@ function Project1() {
             className="project-img"
           />
         </div>
-
-        {/* 이미지 2 */}
         <div className="project-image-wrapper">
           <img 
             src="/images/project1_2.png" 
@@ -26,8 +19,6 @@ function Project1() {
             className="project-img"
           />
         </div>
-
-        {/* 이미지 3 */}
         <div className="project-image-wrapper">
           <img 
             src="/images/project1_3.png" 
@@ -37,8 +28,6 @@ function Project1() {
         </div>
 
       </div>
-
-      {/* 3. 오른쪽 영역: 프로젝트 설명 */}
       <div className="project-description">
         <h2 className="project-title">Project 1: 웹 포트폴리오</h2>
         

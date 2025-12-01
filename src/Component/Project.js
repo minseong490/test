@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProjectData from "./Data/Projects"; 
-import "../css/button.css";
+import "../css/Project.css"; 
 
 export default function Project() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -16,30 +16,24 @@ export default function Project() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      {/* 1. 네비게이션 영역 (이전 / 제목 / 다음) */}
-      <div style={{ 
-        display: "flex", 
-        justifyContent: "space-between", 
-        alignItems: "center",
-        marginBottom: "20px",
-        paddingBottom: "10px",
-        borderBottom: "1px solid #ddd"
-      }}>
-        <button onClick={handlePrev} style={{ cursor: "pointer", padding: "5px 10px" }}>
-          &lt; 이전 프로젝트
+    <div className="project-main-container">
+      {/* 1. 네비게이션 영역 */}
+      <div className="project-nav-header">
+        <button onClick={handlePrev} className="nav-btn">
+          &lt; 이전
         </button>
         
-        <h3 style={{ margin: 0 }}>
+        <h3 className="project-current-title">
           {ProjectData[tabIndex].tab}
         </h3>
 
-        <button onClick={handleNext} style={{ cursor: "pointer", padding: "5px 10px" }}>
-          다음 프로젝트 &gt;
+        <button onClick={handleNext} className="nav-btn">
+          다음 &gt;
         </button>
       </div>
 
-      <div>
+      {/* 2. 콘텐츠 표시 영역 */}
+      <div className="project-content-area">
         {ProjectData[tabIndex].content}
       </div>
     </div>
