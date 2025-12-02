@@ -5,7 +5,13 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* 섹션 제목 스타일 */
+.resume-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  padding-bottom: 10px;
+}
+
 .section-title {
   font-size: 1.4rem;
   font-weight: 700;
@@ -17,7 +23,6 @@
   align-items: center;
 }
 
-/* 1. 기술 스택 뱃지 스타일 */
 .tech-stack-wrapper {
   margin-bottom: 2rem;
 }
@@ -41,9 +46,9 @@
 }
 
 .tech-badge:hover {
-  background-color: #5F56EF;
+  background-color: #5f56ef;
   color: white;
-  border-color: #5F56EF;
+  border-color: #5f56ef;
   transform: translateY(-2px);
 }
 
@@ -51,11 +56,6 @@
   line-height: 1.6;
   opacity: 0.9;
   margin-bottom: 1rem;
-}
-
-/* 2. 테이블 공통 스타일 */
-.resume-table-wrapper {
-  overflow-x: auto; /* 모바일에서 가로 스크롤 허용 */
 }
 
 .resume-table {

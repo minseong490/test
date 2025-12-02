@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css/project123.css"; 
+import "../../css/project123.css";
 
 function Project2() {
   return (
@@ -40,8 +40,9 @@ function Project2() {
         </div>
 
         <p className="project-text">
-          이 서비스는 바쁜 아침, 옷장 앞에서 고민하는 직장인/학생들의 시간을 절약해줍니다. <br/>
-          기온차, 비/눈 등 날씨 변화에 실패하지 않는 옷차림 제안합니다. <br/>
+          이 서비스는 바쁜 아침, 옷장 앞에서 고민하는 직장인/학생들의 시간을
+          절약해줍니다. <br />
+          기온차, 비/눈 등 날씨 변화에 실패하지 않는 옷차림 제안합니다. <br />
           개인의 취향(퍼스널 컬러, 체형)을 분석하여 맞춤형 스타일링 제공합니다.
         </p>
 

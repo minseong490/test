@@ -1,7 +1,6 @@
 /* 전체 컨테이너 */
 .project-main-container {
   padding: 20px;
-  animation: fadeIn 0.3s ease-in-out;
 }
 
 /* 네비게이션 영역 (버튼 + 제목) */
@@ -52,26 +51,4 @@
 /* 콘텐츠 영역 */
 .project-content-area {
   min-height: 400px; /* 콘텐츠가 없어도 최소 높이 유지 */
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 반응형: 모바일에서는 버튼 텍스트 줄임 */
-@media (max-width: 600px) {
-  .project-current-title {
-    font-size: 1.1rem;
-  }
-  .nav-btn {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
 }

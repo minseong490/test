@@ -67,17 +67,3 @@
 .resume-btn:active {
   transform: translateY(-1px);
 }
-
-/* 모바일 반응형 */
-@media (max-width: 768px) {
-  .introduce-section {
-    padding: 2rem 1rem;
-    min-height: auto;
-  }
-  .introduce-title {
-    font-size: 2rem;
-  }
-  .introduce-description {
-    font-size: 1rem;
-  }
-}

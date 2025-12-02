@@ -84,13 +84,3 @@
   line-height: 1.6;
   padding-left: 1.2rem;
 }
-
-/* 반응형 */
-@media (max-width: 768px) {
-  .project-detail-container {
-    flex-direction: column;
-  }
-  .project-image-wrapper {
-    height: 200px;
-  }
-}

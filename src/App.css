@@ -2,15 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Grandiflora+One&display=swap"); /*시작화면 폰트*/
 @import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap"); /*네비게이션바 영어폰트*/
 
-/*nav바를 위로 고정, footer는 아래 고정해서 스크롤해도 아래에있게*/
-/* body{
-  background-color: #222831; 60퍼
-  background-color: #393E46; 20퍼
-  background-color: #00ADB5; 10퍼
-  background-color: #EEEEEE; 10퍼 텍스트와 배경의 대조
-} */
-/* App.css */
-
 html,
 body,
 #root {
@@ -107,12 +98,7 @@ body,
   overflow-y: auto; /* 내용 많으면 자체 스크롤 */
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  word-break: keep-all;
-  line-height: 1.4;
-}
+
 
 /* === 4. Main Section 영역 (.app-section) - 스크롤 영역 === */
 .app-section {
@@ -129,7 +115,6 @@ body,
 
   /* [핵심] 스크롤 설정 */
   overflow-y: auto; /* 세로 스크롤 허용 */
-  min-height: 0; /* Flex 자식 스크롤 버그 방지 */
 }
 
 /* Footer 영역 */
@@ -144,26 +129,6 @@ footer {
   z-index: 10;
 }
 
-/* 반응형
-  @media (max-width: 768px) {
-    .app-wrapper {
-      height: auto;
-      overflow: visible;
-    }
-    .container {
-      flex-direction: column;
-      height: auto;
-      overflow: visible;
-    }
-    .app-header {
-      width: 100%;
-      height: auto;
-    }
-    .app-section {
-      height: auto;
-      overflow: visible;
-    }
-  } */
   /* === 3. Header 영역 (.app-header) - 프로필 사이드바 === */
   .app-header {
     width: 260px; /* 너비 살짝 넓힘 */

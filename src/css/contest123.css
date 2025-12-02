@@ -61,13 +61,3 @@
   font-size: 1.1rem;
   word-break: keep-all; /* 단어 단위 줄바꿈 */
 }
-
-/* 반응형: 모바일 화면 */
-@media (max-width: 768px) {
-  .contest-title {
-    font-size: 2rem;
-  }
-  .contest-image-wrapper {
-    height: 250px; /* 모바일에서는 높이를 줄임 */
-  }
-}

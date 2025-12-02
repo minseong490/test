@@ -27,15 +27,3 @@
   align-items: center;
   gap: 10px;
 }
-
-.contest-index {
-  font-size: 1.2rem;
-}
-
-/* 공모전 내용 박스 */
-.contest-content-box {
-  padding: 30px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
