@@ -1,6 +1,28 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 export default function Contacts() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const nameInputRef = useRef(null); // 초기값 null
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`고마워요, ${formData.name}님! 메시지가 성공적으로 전송되었습니다.`);
+    setFormData({ name: "", email: "", message: "" }); // 입력창 비우기(State 초기화)
+
+    if (nameInputRef.current) {
+      nameInputRef.current.focus();
+    }
+  };
   const socialLinks = [
     {
       name: "Instagram",
@@ -34,9 +56,58 @@ export default function Contacts() {
   return (
     <div>
       <h2>연락처</h2>
-      <p style={wordStyle}>아래 아이콘을 클릭하면 저의 페이지로 연결됩니다.<br/>
-      새로운 프로젝트, 협업 제안, 또는 가벼운 커피챗도 환영합니다!</p>
+      <p style={wordStyle}>
+        아래 아이콘을 클릭하면 저의 페이지로 연결됩니다.
+        <br />
+        새로운 프로젝트, 협업 제안, 또는 가벼운 커피챗도 환영합니다!
+      </p>
 
+      <section>
+        <h3>이메일 보내기</h3>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              ref={nameInputRef}
+              placeholder="성함을 입력해주세요"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="답변 받으실 이메일 주소"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="내용을 입력해주세요."
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <button type="submit">보내기</button>
+        </form>
+      </section>
+      <p>클릭 시 해당 링크로 연결됩니다.</p>
       <div style={{ display: "flex", gap: "20px" }}>
         {socialLinks.map((social) => (
           <a
